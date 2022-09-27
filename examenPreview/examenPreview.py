@@ -5,9 +5,9 @@ import threading
 def verifyUrl(url):
     status = requests.head(url)
     if status.status_code == 200:
-        print(url + ', 200')
+        print(url + ', 200, se proceso correctamente')
     else:
-        print( url  +', 400')
+        print( url  +', 400, no se proceso correctamente')
 
 class Hilo(threading.Thread):
     def __init__(self, url):
