@@ -39,7 +39,7 @@ class Monitor(object):
 
     def queue(self,customer):
         self.reception.acquire()
-        print(colored(f"Cliente {customer.id} se formó en la cola","white","on_black"))
+        print(colored(f"Cliente {customer.id} se formó en la cola","white","on_red"))
         time.sleep(1)
         self.mutex.acquire()
         self.entrar(customer)
