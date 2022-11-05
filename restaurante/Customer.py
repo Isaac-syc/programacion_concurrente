@@ -64,7 +64,7 @@ class Customer(Thread):
             if table == self.end:
                 self.tables.remove(self.end)
            
-        if self.tables.size() == 0:
+        if not self.tables:
             self.waiter.rest()         
                 
         
